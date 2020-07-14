@@ -59,5 +59,3 @@ def __normalize_product_info_names(product_info):
     product_info['offers']['type'] = product_info['offers']['@type']
 
     return product_info
-
-

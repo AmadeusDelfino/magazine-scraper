@@ -5,11 +5,9 @@ from src.magazine.controller import magazine_app
 app = Flask(__name__)
 app.register_blueprint(magazine_app)
 
-exec_scraper()
-
 
 @app.route('/')
-def hello_world():
+def execute_scraper():
     return exec_scraper()
 
 
