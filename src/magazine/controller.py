@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, request
+from flask import render_template, Blueprint
 from src.magazine.model import get_products_list
 from bson.json_util import dumps
 
@@ -13,10 +13,3 @@ def get_products_view():
 @magazine_app.route('/api/v1/products', methods=['GET'])
 def get_products_data():
     return dumps(get_products_list())
-
-
-@magazine_app.route('/api/v1/products/search')
-def get_products_by_code():
-    sku = request.args.get('sku')
-    ean = request.args.get('ean')
-

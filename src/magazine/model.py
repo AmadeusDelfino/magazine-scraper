@@ -16,4 +16,3 @@ def clear_product_list():
 
 def get_products_list():
     return mongo.db.products.find()
-
